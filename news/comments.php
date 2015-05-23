@@ -43,7 +43,7 @@ foreach($arrComments as $commentID) {
 		
 		
 		<p class='main' style='margin-bottom: 40px'>
-		".$commentInfo['message']."<br>
+		".nl2br($commentInfo['message'])."<br>
 		".$member->getMemberLink()." &nbsp; ".getPreciseTime($commentInfo['dateposted']).$dispDelete."
 		</p>
 		
