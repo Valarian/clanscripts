@@ -40,7 +40,12 @@ if(!isset($_SESSION['csrfKey'])) {
 	$_SESSION['csrfKey'] = md5(uniqid());
 }
 
-include($prevFolder."_config.php");
+if(isset($prevFolder)){
+        include($prevFolder."_config.php");
+} else {
+        include("_config.php");
+}
+
 define("BASE_DIRECTORY", $BASE_DIRECTORY);
 //define("BASE_DIRECTORY", str_replace("//", "/", $_SERVER['DOCUMENT_ROOT'].$MAIN_ROOT));
 define("MAIN_ROOT", $MAIN_ROOT);
