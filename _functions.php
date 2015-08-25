@@ -14,7 +14,11 @@
 
 
 
-include($prevFolder."include/lib_autolink/lib_autolink.php");
+if(isset($prevFolder)){
+        include($prevFolder."include/lib_autolink/lib_autolink.php");
+}else{
+        include("include/lib_autolink/lib_autolink.php");
+}
 
 
 // General functions to filter out all <, >, ", and ' symbols
